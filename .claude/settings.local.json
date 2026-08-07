@@ -1,0 +1,42 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(npm view *)",
+      "Bash(cp server/.env.example server/.env)",
+      "Bash(node -e \"console.log\\(require\\('crypto'\\).randomBytes\\(32\\).toString\\('hex'\\)\\)\")",
+      "Bash(npm run *)",
+      "Bash(curl -s http://localhost:4000/api/public/branches/tel-aviv)",
+      "Bash(curl -s -X POST http://localhost:4000/api/auth/login -H \"Content-Type: application/json\" -d '{\"email\":\"admin@example.com\",\"password\":\"Admin123!\"}')",
+      "Bash(curl -s -X POST http://localhost:4000/api/public/branches/tel-aviv/ratings -H \"Content-Type: application/json\" -d '{\"rating\":5,\"source\":\"table-3\"}')",
+      "Bash(curl -s -X POST http://localhost:4000/api/public/branches/tel-aviv/ratings -H \"Content-Type: application/json\" -d '{\"rating\":2,\"source\":\"table-3\"}')",
+      "Bash(curl -s -X POST http://localhost:4000/api/public/responses/52/feedback -H \"Content-Type: application/json\" -d '{\"feedback_token\":\"15FC5B6BAC85CA7029F88E6A\",\"categories\":[\"poor_service\",\"long_wait\"],\"comment\":\"<script>alert\\(1\\)</script>חיכינו יותר מדי זמן\",\"customer_name\":\"בדיקה\",\"customer_phone\":\"0501234567\",\"contact_consent\":true}')",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" -X POST http://localhost:4000/api/public/responses/52/feedback -H \"Content-Type: application/json\" -d '{\"feedback_token\":\"WRONG\",\"categories\":[]}')",
+      "Bash(node -e \"let d='';process.stdin.on\\('data',c=>d+=c\\);process.stdin.on\\('end',\\(\\)=>{const j=JSON.parse\\(d\\);console.log\\('busiest',j.busiest_day,'peak',j.peak_hour,'total',j.total_complaints\\)}\\)\")",
+      "Bash(node -e \"let d='';process.stdin.on\\('data',c=>d+=c\\);process.stdin.on\\('end',\\(\\)=>{const j=JSON.parse\\(d\\).response;console.log\\(JSON.stringify\\({comment:j.comment,name:j.customer_name},null,2\\)\\)}\\)\")",
+      "Bash(xxd)",
+      "Bash(node -e ' *)",
+      "Bash(netstat -ano)",
+      "Bash(taskkill //PID 21252 //F)",
+      "Bash(rm -f server/data/reviews.db server/data/reviews.db-wal server/data/reviews.db-shm)",
+      "Bash(node -e \"let d='';process.stdin.on\\('data',c=>d+=c\\);process.stdin.on\\('end',\\(\\)=>{console.log\\(JSON.parse\\(d\\).users.map\\(u=>u.email+' \\('+u.role+'\\)'\\)\\)}\\)\")",
+      "Bash(node -e \"let d='';process.stdin.on\\('data',c=>d+=c\\);process.stdin.on\\('end',\\(\\)=>{const j=JSON.parse\\(d\\);console.log\\('url:',j.url\\)}\\)\")",
+      "Bash(node -e \"let d='';process.stdin.on\\('data',c=>d+=c\\);process.stdin.on\\('end',\\(\\)=>{const r=JSON.parse\\(d\\).responses[0];console.log\\(JSON.stringify\\(r,null,2\\)\\)}\\)\")",
+      "Bash(node -e \"let d='';process.stdin.on\\('data',c=>d+=c\\);process.stdin.on\\('end',\\(\\)=>{console.log\\(JSON.stringify\\(JSON.parse\\(d\\).responses,null,2\\)\\)}\\)\")",
+      "Bash(node -e \"let d='';process.stdin.on\\('data',c=>d+=c\\);process.stdin.on\\('end',\\(\\)=>{const r=JSON.parse\\(d\\).responses[0];console.log\\('id:',r.id,'status:',r.status\\)}\\)\")",
+      "Bash(node -e \"let d='';process.stdin.on\\('data',c=>d+=c\\);process.stdin.on\\('end',\\(\\)=>{console.log\\('reverted to', JSON.parse\\(d\\).restaurant.accent_color\\)}\\)\")",
+      "Bash(node -e \"let d='';process.stdin.on\\('data',c=>d+=c\\);process.stdin.on\\('end',\\(\\)=>{console.log\\(JSON.stringify\\(JSON.parse\\(d\\).responses[0],null,2\\)\\)}\\)\")",
+      "Bash(node -e \"let d=Buffer.alloc\\(0\\);process.stdin.on\\('data',c=>d=Buffer.concat\\([d,c]\\)\\);process.stdin.on\\('end',\\(\\)=>{console.log\\(d.toString\\('utf8'\\).split\\('\\\\r\\\\n'\\)[0]\\)}\\)\")",
+      "Bash(node server/scripts/seed.js)",
+      "Bash(cd \"C:\\\\Users\\\\user\\\\Desktop\\\\אהרוניס\\\\REVIEWS LINK PLATFORM\" && rm -f server/src/db/*.db && node server/scripts/seed.js)",
+      "Bash(pkill -f \"node src/index.js\")",
+      "Bash(pkill -9 -f \"node src/index.js\")",
+      "Bash(pkill -9 -f \"npm run dev:server\")",
+      "Bash(curl -s -X POST http://localhost:4000/api/public/branches/glilot/ratings -H \"Content-Type: application/json\" -d '{\"rating\": 5, \"source\": \"test\"}')",
+      "Bash(git init *)",
+      "Bash(git config *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
+    ]
+  }
+}

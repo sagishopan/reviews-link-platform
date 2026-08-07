@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>קוד QR - דירוג לקוחות</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; background: #f5f5f5; padding: 20px; }
+    .container { max-width: 600px; margin: 0 auto; }
+    .card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; }
+    .card h1 { font-size: 28px; color: #333; margin-bottom: 10px; }
+    .card p { color: #666; font-size: 16px; margin-bottom: 30px; line-height: 1.6; }
+    .qr-wrapper { background: white; padding: 20px; border-radius: 8px; display: inline-block; margin: 20px 0; border: 2px solid #e0e0e0; }
+    .qr-wrapper img { width: 320px; height: 320px; display: block; }
+    .url { font-size: 14px; color: #999; margin-top: 20px; padding-top: 20px; border-top: 1px solid #e0e0e0; }
+    .branches { background: #f9f9f9; padding: 20px; border-radius: 8px; margin-top: 30px; text-align: right; }
+    .branches h2 { font-size: 18px; color: #333; margin-bottom: 12px; }
+    .branches p { color: #666; font-size: 14px; margin: 8px 0; line-height: 1.5; }
+    @media print {
+      body { padding: 0; background: white; }
+      .card { box-shadow: none; border: 1px solid #ddd; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>אהרוני'ס — דירוג חוויית ביקור</h1>
+      <p>סרקו את הקוד כדי להתחיל דירוג ולבחור את הסניף שלכם</p>
+      
+      <div class="qr-wrapper">
+        <img src="data:image/png;base64,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" alt="QR code for rating">
+      </div>
+
+      <div class="url">https://aharonis-reviews.app/r</div>
+
+      <div class="branches">
+        <h2>הסניפים:</h2>
+        <p>שרונה מרקט — תל אביב</p>
+        <p>ביג פאשן גלילות — רמת השרון</p>
+        <p>צים אורבן — גני תקווה</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

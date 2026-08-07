@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #4a6cf7;
+  --color-primary-end: #5b7bff;
+  --color-accent: #f97316;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: 'Heebo', 'Assistant', system-ui, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+}
+
+* {
+  min-width: 0;
+}
+
+.tap-target {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Stars are 68px with a 10px gap per spec, but 5*68 + 4*10 = 380px does not
+   fit inside common 360-375px mobile viewports. Scale down fluidly on narrow
+   screens (never below the 44px touch-target minimum) while still hitting
+   the exact 68px/10px spec on wider phones (~439px+). */
+.star-row {
+  gap: clamp(6px, 2.28vw, 10px);
+}
+.star-box {
+  width: clamp(44px, 15.5vw, 68px);
+  height: clamp(44px, 15.5vw, 68px);
+}
+.star-icon {
+  width: clamp(36px, 12.7vw, 56px);
+  height: clamp(36px, 12.7vw, 56px);
+}
+
+/* Accessibility: larger text mode */
+.a11y-large-text {
+  font-size: 112.5%;
+}
+
+/* Accessibility: high contrast mode */
+.a11y-high-contrast {
+  filter: contrast(1.2) saturate(1.1);
+}
+.a11y-high-contrast .card-surface {
+  border: 1px solid #000;
+}
+
+/* Accessibility: underline links */
+.a11y-underline-links a {
+  text-decoration: underline !important;
+}
+
+/* Accessibility: stop animations */
+.a11y-reduce-motion,
+.a11y-reduce-motion * {
+  animation-duration: 0.001ms !important;
+  transition-duration: 0.001ms !important;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.spin {
+  animation: spin 0.8s linear infinite;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>קודי QR להדפסה</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; background: #f5f5f5; padding: 20px; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .header { text-align: center; margin-bottom: 40px; }
+    .header h1 { font-size: 28px; margin-bottom: 10px; color: #333; }
+    .qr-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
+    .qr-card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; page-break-inside: avoid; }
+    .qr-card img { width: 250px; height: 250px; margin: 20px auto; border: 2px solid #e0e0e0; padding: 10px; }
+    .qr-card h2 { font-size: 18px; color: #333; margin-bottom: 5px; }
+    .qr-card p { color: #666; font-size: 14px; margin-bottom: 20px; }
+    .qr-card .url { font-size: 12px; color: #999; word-break: break-all; margin-top: 15px; padding-top: 15px; border-top: 1px solid #e0e0e0; }
+    @media print {
+      body { padding: 0; background: white; }
+      .qr-grid { grid-template-columns: 1fr; }
+      .qr-card { page-break-after: always; box-shadow: none; border: 1px solid #ddd; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>קודי QR להדפסה</h1>
+      <p>אהרוני'ס - סניפים</p>
+    </div>
+    <div class="qr-grid">
+      <div class="qr-card">
+        <h2>אהרוני'ס פרייד צ'יקן — שרונה מרקט</h2>
+        <p>סרקו את הקוד כדי להתחיל דירוג</p>
+        <img src="data:image/png;base64,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" alt="QR code for אהרוני'ס פרייד צ'יקן — שרונה מרקט">
+        <div class="url">https://localhost:5173/r/sarona</div>
+      </div>
+      <div class="qr-card">
+        <h2>אהרוני'ס פרייד צ'יקן — ביג פאשן גלילות</h2>
+        <p>סרקו את הקוד כדי להתחיל דירוג</p>
+        <img src="data:image/png;base64,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" alt="QR code for אהרוני'ס פרייד צ'יקן — ביג פאשן גלילות">
+        <div class="url">https://localhost:5173/r/glilot</div>
+      </div>
+      <div class="qr-card">
+        <h2>אהרוני'ס קצבייה, המבורגריה ורוטיסרי — גני תקווה</h2>
+        <p>סרקו את הקוד כדי להתחיל דירוג</p>
+        <img src="data:image/png;base64,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" alt="QR code for אהרוני'ס קצבייה, המבורגריה ורוטיסרי — גני תקווה">
+        <div class="url">https://localhost:5173/r/ganei-tikva</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
