@@ -2,23 +2,33 @@
 export default {
   content: ['./index.html', './src/**/*.{js,jsx}'],
   theme: {
+    borderRadius: {
+      'none': '0px',
+      'sm': '2px',
+      'md': '4px',
+      'lg': '0px',
+      'xl': '0px',
+      '2xl': '4px',
+      '3xl': '8px',
+      'full': '9999px',
+    },
     extend: {
       colors: {
         primary: 'var(--color-primary)',
         'primary-end': 'var(--color-primary-end)',
         accent: 'var(--color-accent)',
-        heading: '#1B2437',
+        heading: '#E84C89',
         body: '#6B7280',
         'star-empty': '#E4E7EC',
-        'star-filled': '#FBBF24',
-        footer: '#3C4451',
-        sidebar: '#1E2130',
+        'star-filled': '#FCD34D',
+        footer: '#E84C89',
+        sidebar: '#E84C89',
         'admin-bg': '#F5F7FF',
-        'admin-heading': '#1B2144',
+        'admin-heading': '#E84C89',
         'admin-body': '#6B7280',
       },
       fontFamily: {
-        sans: ['Assistant', 'Heebo', 'system-ui', 'sans-serif'],
+        sans: ['Noto Sans', 'Assistant', 'Heebo', 'system-ui', 'sans-serif'],
       },
       keyframes: {
         popIn: {

@@ -9,7 +9,7 @@ const STATUS_OPTIONS = Object.entries(t.admin.status).map(([value, label]) => ({
 
 export default function FeedbackCard({ item, onStatusChange }) {
   return (
-    <div className="bg-white rounded-2xl shadow-sm p-5">
+    <div className="bg-white rounded-md shadow-sm p-5">
       <div className="flex items-start justify-between gap-3 mb-3">
         <div className="flex items-center gap-2 text-sm text-admin-body">
           <svg viewBox="0 0 24 24" width={16} height={16} fill="none" stroke="currentColor" strokeWidth="2">
@@ -52,7 +52,7 @@ export default function FeedbackCard({ item, onStatusChange }) {
           <select
             value={item.status}
             onChange={(e) => onStatusChange(item.id, e.target.value)}
-            className="text-xs border border-gray-200 rounded-lg px-2 py-1 text-admin-heading focus:outline-none focus:border-accent"
+            className="text-xs border border-gray-200 rounded-sm px-2 py-1 text-admin-heading focus:outline-none focus:border-accent"
           >
             {STATUS_OPTIONS.map((o) => (
               <option key={o.value} value={o.value}>

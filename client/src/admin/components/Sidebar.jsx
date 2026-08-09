@@ -64,8 +64,8 @@ export default function Sidebar() {
       <div className="p-5">
         <div className="flex items-center gap-3 mb-8">
           <div
-            className="w-11 h-11 rounded-xl flex items-center justify-center font-extrabold shrink-0"
-            style={{ background: 'linear-gradient(135deg, #7C3AED, #4A6CF7)' }}
+            className="w-11 h-11 rounded-md flex items-center justify-center font-extrabold shrink-0"
+            style={{ background: 'linear-gradient(135deg, #E84C89, #FCD34D)' }}
           >
             {t.meta.brand_initials}
           </div>

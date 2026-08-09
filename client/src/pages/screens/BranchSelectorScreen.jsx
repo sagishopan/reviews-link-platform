@@ -94,7 +94,7 @@ export default function BranchSelectorScreen({ branches, onSelect }) {
               key={branch.id}
               type="button"
               onClick={() => handleSelect(branchCopy)}
-              className="flex items-center justify-between p-4 rounded-2xl border border-gray-200 bg-white hover:border-accent active:border-accent transition-colors tap-target text-right"
+              className="flex items-center justify-between p-4 rounded-md border border-gray-200 bg-white hover:border-accent active:border-accent transition-colors tap-target text-right"
               style={{ height: 82 }}
             >
               <svg width={20} height={20} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>

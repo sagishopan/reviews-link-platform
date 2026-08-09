@@ -66,7 +66,7 @@ function seedRestaurantAndBranches() {
 
   const result = db
     .prepare('INSERT INTO restaurants (name, slug, primary_color, accent_color, default_rating_threshold) VALUES (?, ?, ?, ?, ?)')
-    .run(restaurantName, restaurantSlug, '#4A6CF7', '#F97316', 4);
+    .run(restaurantName, restaurantSlug, '#E84C89', '#FCD34D', 4);
   restaurant = db.prepare('SELECT * FROM restaurants WHERE id = ?').get(result.lastInsertRowid);
   console.log(`[seed] Created restaurant "${restaurantName}" (id=${restaurant.id}, slug=${restaurantSlug})`);
 

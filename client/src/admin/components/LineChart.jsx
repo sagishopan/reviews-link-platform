@@ -34,8 +34,8 @@ export default function LineChart({ data }) {
     <svg viewBox={`0 0 ${WIDTH} ${HEIGHT}`} className="w-full h-auto" preserveAspectRatio="none" style={{ minHeight: 200 }}>
       <defs>
         <linearGradient id="lineArea" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#4A6CF7" stopOpacity="0.25" />
-          <stop offset="100%" stopColor="#4A6CF7" stopOpacity="0" />
+          <stop offset="0%" stopColor="#E84C89" stopOpacity="0.25" />
+          <stop offset="100%" stopColor="#E84C89" stopOpacity="0" />
         </linearGradient>
       </defs>
 
@@ -52,10 +52,10 @@ export default function LineChart({ data }) {
       })}
 
       <path d={areaPath} fill="url(#lineArea)" />
-      <path d={linePath} fill="none" stroke="#4A6CF7" strokeWidth="2.5" strokeLinejoin="round" strokeLinecap="round" />
+      <path d={linePath} fill="none" stroke="#E84C89" strokeWidth="2.5" strokeLinejoin="round" strokeLinecap="round" />
 
       {points.map((p, i) => (
-        <circle key={i} cx={p.x} cy={p.y} r="3" fill="#4A6CF7" />
+        <circle key={i} cx={p.x} cy={p.y} r="3" fill="#E84C89" />
       ))}
 
       {points.map((p, i) =>

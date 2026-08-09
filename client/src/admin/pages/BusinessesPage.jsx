@@ -199,7 +199,7 @@ function QrGenerator({ restaurant }) {
             className="w-full mt-1 border border-gray-200 rounded-lg px-3 py-2 text-sm"
           />
         </div>
-        <button type="button" onClick={generate} disabled={busy} className="px-4 py-2 rounded-lg text-white text-sm font-semibold" style={{ backgroundColor: 'var(--color-primary, #4A6CF7)' }}>
+        <button type="button" onClick={generate} disabled={busy} className="px-4 py-2 rounded-lg text-white text-sm font-semibold" style={{ backgroundColor: 'var(--color-primary, #E84C89)' }}>
           {busy ? t.common.loading : tb.qr_show}
         </button>
       </div>

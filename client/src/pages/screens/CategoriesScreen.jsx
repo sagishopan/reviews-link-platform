@@ -41,12 +41,12 @@ export default function CategoriesScreen({ selected, onToggle, onContinue, onSki
               type="button"
               onClick={() => onToggle(key)}
               aria-pressed={isSelected}
-              className="flex flex-col items-center justify-center rounded-2xl border transition-colors tap-target"
+              className="flex flex-col items-center justify-center rounded-md border transition-colors tap-target"
               style={{
                 height: 108,
                 borderWidth: isSelected ? 2 : 1,
                 borderColor: isSelected ? 'var(--color-accent)' : '#E5E7EB',
-                backgroundColor: isSelected ? 'rgba(249, 115, 22, 0.05)' : '#FFFFFF',
+                backgroundColor: isSelected ? 'rgba(252, 211, 77, 0.05)' : '#FFFFFF',
                 boxShadow: '0 1px 2px rgba(16, 24, 40, 0.04)',
               }}
             >
@@ -64,7 +64,7 @@ export default function CategoriesScreen({ selected, onToggle, onContinue, onSki
           type="button"
           onClick={onContinue}
           className="w-full font-bold text-white tap-target"
-          style={{ height: 58, borderRadius: 12, fontSize: 19, backgroundColor: 'var(--color-accent)' }}
+          style={{ height: 58, borderRadius: 4, fontSize: 19, backgroundColor: 'var(--color-accent)' }}
         >
           {hasSelection ? t.categories.continue : t.categories.continue_empty}
         </button>

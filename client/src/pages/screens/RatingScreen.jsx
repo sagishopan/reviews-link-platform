@@ -30,7 +30,7 @@ export default function RatingScreen({ branch, rating, onSelect, redirecting, al
 
       <main
         className="flex-1 bg-white flex flex-col items-center px-6 pb-8"
-        style={{ marginTop: -32, borderTopLeftRadius: 32, borderTopRightRadius: 32 }}
+        style={{ marginTop: -32, borderTopLeftRadius: 8, borderTopRightRadius: 8 }}
       >
         <h2 className="font-extrabold text-heading text-center" style={{ fontSize: 30, marginTop: 40 }}>
           {branch?.question_text || t.rating.question}

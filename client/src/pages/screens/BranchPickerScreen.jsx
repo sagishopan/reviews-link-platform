@@ -9,10 +9,10 @@ export default function BranchPickerScreen({ restaurant, branches, onSelect }) {
     <Screen className="min-h-screen flex flex-col bg-white px-5 pt-10 pb-8">
       <div className="flex flex-col items-center text-center mb-8">
         {restaurant?.logo_url ? (
-          <img src={restaurant.logo_url} alt={restaurant.name} className="h-16 w-16 rounded-2xl object-cover mb-4" />
+          <img src={restaurant.logo_url} alt={restaurant.name} className="h-16 w-16 rounded-md object-cover mb-4" />
         ) : (
           <div
-            className="h-16 w-16 rounded-2xl mb-4 flex items-center justify-center text-white text-2xl font-bold"
+            className="h-16 w-16 rounded-md mb-4 flex items-center justify-center text-white text-2xl font-bold"
             style={{ backgroundColor: 'var(--color-primary)' }}
           >
             {restaurant?.name?.[0] || '?'}
@@ -35,7 +35,7 @@ export default function BranchPickerScreen({ restaurant, branches, onSelect }) {
             key={b.id}
             type="button"
             onClick={() => onSelect(b)}
-            className="w-full flex items-center justify-between rounded-2xl border border-gray-200 px-5 tap-target hover:bg-gray-50 active:scale-[0.99] transition"
+            className="w-full flex items-center justify-between rounded-md border border-gray-200 px-5 tap-target hover:bg-gray-50 active:scale-[0.99] transition"
             style={{ height: 64 }}
           >
             <span className="font-semibold text-heading" style={{ fontSize: 17 }}>

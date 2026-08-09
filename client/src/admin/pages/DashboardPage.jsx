@@ -11,7 +11,7 @@ const td = t.admin.dashboard;
 
 function MetricCard({ gradient, value, label }) {
   return (
-    <div className="rounded-2xl p-5 text-white flex-1 min-w-[160px]" style={{ background: gradient }}>
+    <div className="rounded-md p-5 text-white flex-1 min-w-[160px]" style={{ background: gradient }}>
       <div className="font-extrabold" style={{ fontSize: 34 }}>
         {value}
       </div>
@@ -66,27 +66,27 @@ export default function DashboardPage() {
           {td.badge}
         </span>
         <h1 className="font-extrabold text-admin-heading" style={{ fontSize: 40 }}>
-          {td.greeting}, <span style={{ color: 'var(--color-primary, #4A6CF7)' }}>{user?.name || user?.email}</span> {td.wave}
+          {td.greeting}, <span style={{ color: 'var(--color-primary, #E84C89)' }}>{user?.name || user?.email}</span> {td.wave}
         </h1>
         <p className="text-admin-body mt-1">{td.subtitle}</p>
       </div>
 
       <div className="flex flex-wrap gap-4">
-        <MetricCard gradient="linear-gradient(135deg, #4A6CF7, #6366F1)" value={loading ? '-' : formatNumber(businessCount)} label={td.total_businesses} />
+        <MetricCard gradient="linear-gradient(135deg, #E84C89, #D946A6)" value={loading ? '-' : formatNumber(businessCount)} label={td.total_businesses} />
         <MetricCard gradient="linear-gradient(135deg, #22C55E, #16A34A)" value={loading ? '-' : formatNumber(weekFeedback)} label={td.week_feedback} />
         <MetricCard gradient="linear-gradient(135deg, #F97316, #EA580C)" value={loading ? '-' : formatNumber(needsAttention)} label={td.needs_attention} />
       </div>
 
       <Link
         to="/admin/businesses"
-        className="w-full py-4 rounded-2xl text-white font-bold text-center flex items-center justify-center gap-2"
-        style={{ background: 'linear-gradient(135deg, #4A6CF7, #7C3AED)' }}
+        className="w-full py-4 rounded-md text-white font-bold text-center flex items-center justify-center gap-2"
+        style={{ background: 'linear-gradient(135deg, #E84C89, #FCD34D)' }}
       >
         <span>+</span> {td.add_business}
       </Link>
 
-      <div className="bg-white rounded-2xl shadow-sm overflow-hidden">
-        <div style={{ height: 4, background: 'linear-gradient(90deg, #4A6CF7, #EC4899)' }} />
+      <div className="bg-white rounded-md shadow-sm overflow-hidden">
+        <div style={{ height: 4, background: 'linear-gradient(90deg, #E84C89, #FCD34D)' }} />
         <div className="p-6">
           <div className="flex items-start justify-between mb-5">
             <div>
@@ -112,7 +112,7 @@ export default function DashboardPage() {
                 <svg viewBox="0 0 24 24" width={20} height={20} fill="#F59E0B">
                   <path d="M12 2.5l2.9 6.6 7.1.7-5.4 4.7 1.6 7-6.2-3.8-6.2 3.8 1.6-7L2 9.8l7.1-.7L12 2.5z" />
                 </svg>
-                <span className="font-extrabold" style={{ fontSize: 32, color: 'var(--color-primary, #4A6CF7)' }}>
+                <span className="font-extrabold" style={{ fontSize: 32, color: 'var(--color-primary, #E84C89)' }}>
                   {trend ? formatNumber(trend.avg_rating) : '-'}
                 </span>
               </div>
@@ -130,14 +130,14 @@ export default function DashboardPage() {
 
           <div className="flex items-center gap-6 mt-3 text-xs text-admin-body">
             <span className="flex items-center gap-1.5">
-              <span className="w-2 h-2 rounded-full inline-block" style={{ backgroundColor: '#4A6CF7' }} /> {td.chart_legend_avg}
+              <span className="w-2 h-2 rounded-full inline-block" style={{ backgroundColor: '#E84C89' }} /> {td.chart_legend_avg}
             </span>
             <span className="flex items-center gap-1.5">{td.chart_legend_hint}</span>
           </div>
         </div>
       </div>
 
-      <div className="bg-white rounded-2xl shadow-sm p-6">
+      <div className="bg-white rounded-md shadow-sm p-6">
         <div className="flex items-center justify-between mb-4">
           <h2 className="font-bold text-admin-heading text-lg">{td.recent_feedback}</h2>
           <Link to="/admin/feedback" className="text-sm font-semibold" style={{ color: 'var(--color-accent, #F97316)' }}>

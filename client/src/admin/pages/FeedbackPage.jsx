@@ -208,11 +208,11 @@ export default function FeedbackPage() {
 
       <div className="flex flex-wrap gap-4">
         <SummaryTile
-          color="#4A6CF7"
+          color="#E84C89"
           value={result.summary.avg_rating}
           label={tf.tile_avg_rating}
           icon={
-            <svg viewBox="0 0 24 24" width={18} height={18} fill="#4A6CF7">
+            <svg viewBox="0 0 24 24" width={18} height={18} fill="#E84C89">
               <path d="M12 2.5l2.9 6.6 7.1.7-5.4 4.7 1.6 7-6.2-3.8-6.2 3.8 1.6-7L2 9.8l7.1-.7L12 2.5z" />
             </svg>
           }

@@ -9,7 +9,7 @@ export default function ContactScreen({ contact, onChange, onFinish }) {
   const needsContact = contact.consent && !phoneValid;
 
   const inputClass =
-    'w-full rounded-xl border border-gray-200 px-4 py-3 text-heading focus:outline-none focus:border-accent';
+    'w-full rounded-md border border-gray-200 px-4 py-3 text-heading focus:outline-none focus:border-accent';
 
   return (
     <Screen className="min-h-screen flex flex-col bg-white px-5" style={{ paddingTop: 'calc(env(safe-area-inset-top, 0px) + 32px)' }}>
@@ -72,7 +72,7 @@ export default function ContactScreen({ contact, onChange, onFinish }) {
           onClick={onFinish}
           disabled={needsContact}
           className="w-full font-bold text-white tap-target disabled:opacity-50"
-          style={{ height: 58, borderRadius: 12, fontSize: 19, backgroundColor: 'var(--color-accent)' }}
+          style={{ height: 58, borderRadius: 4, fontSize: 19, backgroundColor: 'var(--color-accent)' }}
         >
           {t.contact.finish}
         </button>

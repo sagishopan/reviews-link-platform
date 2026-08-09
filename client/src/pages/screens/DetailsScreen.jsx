@@ -20,7 +20,7 @@ export default function DetailsScreen({ comment, onChange, onContinue }) {
         placeholder={t.details.placeholder}
         rows={8}
         maxLength={2000}
-        className="flex-1 w-full rounded-2xl border border-gray-200 p-4 text-heading resize-none focus:outline-none focus:border-accent"
+        className="flex-1 w-full rounded-md border border-gray-200 p-4 text-heading resize-none focus:outline-none focus:border-accent"
         style={{ fontSize: 16, minHeight: 180 }}
       />
 
@@ -29,7 +29,7 @@ export default function DetailsScreen({ comment, onChange, onContinue }) {
           type="button"
           onClick={onContinue}
           className="w-full font-bold text-white tap-target"
-          style={{ height: 58, borderRadius: 12, fontSize: 19, backgroundColor: 'var(--color-accent)' }}
+          style={{ height: 58, borderRadius: 4, fontSize: 19, backgroundColor: 'var(--color-accent)' }}
         >
           {t.details.continue}
         </button>
