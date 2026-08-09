@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import { I18nProvider } from './i18n/I18nContext.jsx';
 import { AccessibilityProvider } from './context/AccessibilityContext.jsx';
 import RatingFlow from './pages/RatingFlow.jsx';
+import PrivacyPolicyPage from './pages/screens/PrivacyPolicyPage.jsx';
 import { AuthProvider } from './admin/AuthContext.jsx';
 import ProtectedRoute from './admin/components/ProtectedRoute.jsx';
 import AdminLayout from './admin/components/AdminLayout.jsx';
@@ -28,6 +29,7 @@ function CustomerApp() {
       <AccessibilityProvider>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/privacy" element={<PrivacyPolicyPage />} />
           <Route path="/r" element={<RatingFlow />} />
           <Route path="/r/:slug" element={<RatingFlow />} />
         </Routes>

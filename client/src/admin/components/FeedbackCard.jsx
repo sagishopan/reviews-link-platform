@@ -61,12 +61,20 @@ export default function FeedbackCard({ item, onStatusChange }) {
             ))}
           </select>
         </div>
-        <div className="flex items-center gap-1.5 text-admin-body" style={{ fontSize: 11 }}>
-          <svg viewBox="0 0 24 24" width={12} height={12} fill="none" stroke="currentColor" strokeWidth="2">
-            <rect x="5" y="11" width="14" height="9" rx="1.5" />
-            <path d="M8 11V7a4 4 0 018 0v4" />
-          </svg>
-          <span>{tf.legal_disclaimer}</span>
+        <div className="flex items-center gap-3 text-admin-body" style={{ fontSize: 11 }}>
+          <div className="flex items-center gap-1.5">
+            <svg viewBox="0 0 24 24" width={12} height={12} fill="none" stroke="currentColor" strokeWidth="2">
+              <rect x="5" y="11" width="14" height="9" rx="1.5" />
+              <path d="M8 11V7a4 4 0 018 0v4" />
+            </svg>
+            <span>{tf.legal_disclaimer}</span>
+          </div>
+          {item.policy_version && (
+            <>
+              <span>·</span>
+              <span>ע"ד {item.policy_version}</span>
+            </>
+          )}
         </div>
       </div>
     </div>

@@ -75,9 +75,12 @@ export default function BranchSelectorScreen({ branches, onSelect }) {
       }}
     >
       <div className="px-5 pb-8">
-        <h1 className="font-extrabold text-heading" style={{ fontSize: 28, marginBottom: 16 }}>
+        <h1 className="font-extrabold text-heading" style={{ fontSize: 28, marginBottom: 12 }}>
           {t.picker.title}
         </h1>
+        <p className="text-body text-right" style={{ fontSize: 13, lineHeight: 1.5, color: '#666' }}>
+          {t.picker.location_hint}
+        </p>
       </div>
 
       <div className="flex-1 px-5 flex flex-col gap-3">

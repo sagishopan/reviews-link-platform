@@ -52,6 +52,13 @@ export default function ContactScreen({ contact, onChange, onFinish }) {
           </span>
         </label>
 
+        <p className="text-body text-right" style={{ fontSize: 13, lineHeight: 1.5 }}>
+          {t.contact.privacy_notice}{' '}
+          <a href="/privacy" target="_blank" rel="noreferrer" className="font-semibold text-accent underline">
+            {t.contact.privacy_link_text}
+          </a>
+        </p>
+
         {needsContact && (
           <p className="text-accent" style={{ fontSize: 13 }}>
             {contact.phone ? t.contact.invalid_phone : t.contact.contact_required_hint}

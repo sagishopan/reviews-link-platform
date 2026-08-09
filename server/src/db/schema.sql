@@ -62,6 +62,7 @@ CREATE TABLE IF NOT EXISTS responses (
   internal_notes TEXT,
   ip_hash TEXT,
   branch_selection_method TEXT,  -- additive: 'manual' | 'geo' | 'direct_link' - how the branch was selected
+  policy_version TEXT,           -- additive: privacy policy version customer agreed to
   created_at TEXT DEFAULT CURRENT_TIMESTAMP
 );
 

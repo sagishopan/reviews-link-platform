@@ -92,10 +92,10 @@ router.post('/branches/:slug/ratings', (req, res, next) => {
 
     const result = db
       .prepare(
-        `INSERT INTO responses (branch_id, rating, source, sentiment, ip_hash, feedback_token, redirected_out, status, branch_selection_method)
-         VALUES (?, ?, ?, ?, ?, ?, ?, 'pending', ?)`
+        `INSERT INTO responses (branch_id, rating, source, sentiment, ip_hash, feedback_token, redirected_out, status, branch_selection_method, policy_version)
+         VALUES (?, ?, ?, ?, ?, ?, ?, 'pending', ?, ?)`
       )
-      .run(branch.id, rating, source, sentiment, ipHash, feedbackToken, needsFeedback ? 0 : 1, selectionMethod);
+      .run(branch.id, rating, source, sentiment, ipHash, feedbackToken, needsFeedback ? 0 : 1, selectionMethod, '1.0');
 
     recordRatingSubmission(ipHash, branch.id);
 

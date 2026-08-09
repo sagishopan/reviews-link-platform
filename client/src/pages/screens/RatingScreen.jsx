@@ -64,7 +64,7 @@ export default function RatingScreen({ branch, rating, onSelect, redirecting, al
         </div>
       </main>
 
-      <PrivacyStrip policyUrl={branch?.privacy_policy_url} />
+      <PrivacyStrip />
     </Screen>
   );
 }

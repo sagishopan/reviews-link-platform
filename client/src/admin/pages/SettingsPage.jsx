@@ -3,6 +3,7 @@ import { useAuth } from '../AuthContext.jsx';
 import { restaurants as restaurantsApi, branches as branchesApi, users as usersApi, settingsApi } from '../adminApi.js';
 import { formatNumber, sortByName } from '../formatters.js';
 import { t, translateError } from '../../locales/index.js';
+import privacyPolicyMeta from '../../content/privacy-policy.meta.json';
 
 const ts = t.admin.settings;
 const tc = t.common;
@@ -387,6 +388,24 @@ export default function SettingsPage() {
         canManage={user?.role === 'super_admin' || user?.role === 'restaurant_admin'}
         onChanged={() => loadSettings(restaurantId)}
       />
+
+      <Section title="מסמכים משפטיים" subtitle="מדיניות הפרטיות וטקסטים חוקיים">
+        <div className="space-y-3">
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-sm font-medium text-admin-heading">מדיניות פרטיות</p>
+              <p className="text-xs text-admin-body mt-0.5">גרסה {privacyPolicyMeta.version} • עדכון: {privacyPolicyMeta.updatedAt}</p>
+            </div>
+            <button
+              onClick={() => window.open('/privacy', '_blank')}
+              className="px-4 py-2 rounded-lg text-white font-semibold text-sm"
+              style={{ backgroundColor: 'var(--color-accent, #F97316)' }}
+            >
+              צפיה בעמוד
+            </button>
+          </div>
+        </div>
+      </Section>
     </div>
   );
 }
