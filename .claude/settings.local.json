@@ -48,7 +48,8 @@
       "Bash(git push *)",
       "Bash(railway --version)",
       "Bash(railway link *)",
-      "Bash(git commit *)"
+      "Bash(git commit *)",
+      "Bash(railway logs *)"
     ]
   }
 }

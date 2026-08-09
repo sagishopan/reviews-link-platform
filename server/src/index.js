@@ -30,13 +30,16 @@ app.use('/api/admin', adminRoutes);
 
 // Serve the built React client (client/dist) in production.
 const clientDist = path.join(__dirname, '..', '..', 'client', 'dist');
+console.log('[Server] Client dist path:', clientDist);
+console.log('[Server] Client dist exists:', fs.existsSync(clientDist));
 app.use(express.static(clientDist));
 
 app.get('*', (req, res, next) => {
   if (req.path.startsWith('/api/')) return next();
   const indexPath = path.join(clientDist, 'index.html');
+  console.log('[Server] Serving index.html:', indexPath, '| exists:', fs.existsSync(indexPath));
   if (!fs.existsSync(indexPath)) {
-    return res.status(200).send('Reviews Link Platform API is running. Client build not found yet - run "npm run build:client".');
+    return res.status(200).send('Reviews Link Platform API is running. Client build not found yet - run "npm run build".');
   }
   res.sendFile(indexPath, (err) => {
     if (err) next(err);
