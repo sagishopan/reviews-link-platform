@@ -3,16 +3,16 @@ import Screen from '../../components/Screen.jsx';
 import { useI18n } from '../../i18n/I18nContext.jsx';
 
 const CATEGORY_EMOJI = {
-  food_quality: '🍽️',
-  poor_service: '👥',
-  long_wait: '🕐',
-  low_quality: '✨',
-  high_price: '💲',
-  cleanliness: '🧹',
-  atmosphere: '☕',
-  limited_variety: '🛍️',
-  unprofessional_staff: '👤',
-  other: '😞',
+  food_quality: '🍗',
+  poor_service: '🙋',
+  long_wait: '⏳',
+  low_quality: '📉',
+  high_price: '🏷️',
+  cleanliness: '🧽',
+  atmosphere: '🔊',
+  limited_variety: '📋',
+  unprofessional_staff: '🤷',
+  other: '✍️',
 };
 
 const CATEGORY_ORDER = Object.keys(CATEGORY_EMOJI);

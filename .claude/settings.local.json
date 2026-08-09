@@ -51,7 +51,8 @@
       "Bash(git commit *)",
       "Bash(railway logs *)",
       "Bash(git rm *)",
-      "Bash(rm -rf client/dist)"
+      "Bash(rm -rf client/dist)",
+      "Bash(git commit -m 'Update categories screen: new titles, labels, and emojis *)"
     ]
   }
 }

@@ -43,22 +43,22 @@
     "star_aria_label": "דרג {n} מתוך 5"
   },
   "categories": {
-    "title": "מה לא עבד טוב?",
-    "subtitle": "מידע זה פנימי בלבד ומיועד לשיפור השירות.",
-    "continue_empty": "המשך ללא בחירה",
-    "continue": "המשך",
-    "skip_all": "דלג על הכל",
+    "title": "מה נוכל לעשות טוב יותר?",
+    "subtitle": "התשובה מגיעה ישירות לצוות הניהול ולא מתפרסמת בשום מקום.",
+    "continue_empty": "אפשר גם בלי לפרט",
+    "continue": "ממשיכים",
+    "skip_all": "לא רוצה לפרט",
     "items": {
-      "food_quality": "איכות האוכל",
-      "poor_service": "שירות לקוי",
-      "long_wait": "זמני המתנה ארוכים",
-      "low_quality": "איכות נמוכה",
-      "high_price": "מחיר גבוה",
-      "cleanliness": "ניקיון לא מספק",
-      "atmosphere": "אווירה לא נעימה",
-      "limited_variety": "מגוון מוגבל",
-      "unprofessional_staff": "צוות לא מקצועי",
-      "other": "אחר"
+      "food_quality": "האוכל לא היה כמו שציפיתי",
+      "poor_service": "היחס לא היה מספיק אדיב",
+      "long_wait": "חיכינו יותר מדי",
+      "low_quality": "משהו בביצוע היה חלש",
+      "high_price": "המחיר לא הרגיש מוצדק",
+      "cleanliness": "הניקיון לא היה ברמה",
+      "atmosphere": "לא היה נעים לשבת",
+      "limited_variety": "חסרו לי אפשרויות בתפריט",
+      "unprofessional_staff": "הצוות לא ידע לענות",
+      "other": "משהו אחר"
     }
   },
   "details": {
