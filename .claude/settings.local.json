@@ -45,7 +45,9 @@
       "mcp__claude-in-chrome__find",
       "Bash(git remote *)",
       "Bash(git branch *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(railway --version)",
+      "Bash(railway link *)"
     ]
   }
 }
