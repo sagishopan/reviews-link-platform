@@ -53,7 +53,10 @@
       "Bash(git rm *)",
       "Bash(rm -rf client/dist)",
       "Bash(git commit -m 'Update categories screen: new titles, labels, and emojis *)",
-      "Bash(rm -f server/data/reviews.db server/data/reviews.db-shm server/data/reviews.db-wal)"
+      "Bash(rm -f server/data/reviews.db server/data/reviews.db-shm server/data/reviews.db-wal)",
+      "Bash(curl -s -X POST http://localhost:4000/api/auth/login -H 'Content-Type: application/json' -d '{\"email\":\"admin@example.com\",\"password\":\"Admin123!\"}')",
+      "Bash(sqlite3 server/data/reviews.db \"SELECT email, password_hash FROM users LIMIT 1;\")",
+      "Bash(rm -f server/data/reviews.db*)"
     ]
   }
 }
