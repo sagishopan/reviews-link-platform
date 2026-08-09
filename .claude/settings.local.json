@@ -47,7 +47,8 @@
       "Bash(git branch *)",
       "Bash(git push *)",
       "Bash(railway --version)",
-      "Bash(railway link *)"
+      "Bash(railway link *)",
+      "Bash(git commit *)"
     ]
   }
 }
