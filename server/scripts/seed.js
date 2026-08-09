@@ -41,16 +41,17 @@ function pick(arr) {
 }
 
 function seedAdmin() {
-  const existing = db.prepare('SELECT id FROM users WHERE email = ?').get(ADMIN_EMAIL);
+  const normalizedEmail = ADMIN_EMAIL.toLowerCase().trim();
+  const existing = db.prepare('SELECT id FROM users WHERE email = ?').get(normalizedEmail);
   if (existing) {
-    console.log(`[seed] Admin user already exists (${ADMIN_EMAIL}), skipping.`);
+    console.log(`[seed] Admin user already exists (${normalizedEmail}), skipping.`);
     return existing.id;
   }
   const passwordHash = bcrypt.hashSync(ADMIN_PASSWORD, 10);
   const result = db
     .prepare('INSERT INTO users (email, password_hash, name, role) VALUES (?, ?, ?, ?)')
-    .run(ADMIN_EMAIL, passwordHash, 'מנהל ראשי', 'super_admin');
-  console.log(`[seed] Created super_admin user: ${ADMIN_EMAIL} / ${ADMIN_PASSWORD}`);
+    .run(normalizedEmail, passwordHash, 'מנהל ראשי', 'super_admin');
+  console.log(`[seed] Created super_admin user: ${normalizedEmail} / ${ADMIN_PASSWORD}`);
   return result.lastInsertRowid;
 }
 
@@ -166,7 +167,7 @@ function seedResponses(branches, count) {
 }
 
 function seedBranchManager(branches) {
-  const email = 'branch-manager@example.com';
+  const email = 'branch-manager@example.com'.toLowerCase().trim();
   const existing = db.prepare('SELECT id FROM users WHERE email = ?').get(email);
   if (existing || !branches.length) return;
   const passwordHash = bcrypt.hashSync('Manager123!', 10);
@@ -177,7 +178,7 @@ function seedBranchManager(branches) {
 }
 
 function seedRestaurantAdmin(restaurant) {
-  const email = 'restaurant-admin@example.com';
+  const email = 'restaurant-admin@example.com'.toLowerCase().trim();
   const existing = db.prepare('SELECT id FROM users WHERE email = ?').get(email);
   if (existing) return;
   const passwordHash = bcrypt.hashSync('Restaurant123!', 10);
