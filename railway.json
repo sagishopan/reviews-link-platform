@@ -4,7 +4,6 @@
     "builder": "nixpacks"
   },
   "deploy": {
-    "buildCommand": "npm install && npm run seed --workspace=server",
     "startCommand": "npm run start --workspace=server",
     "restartPolicyType": "on_failure",
     "restartPolicyMaxRetries": 5

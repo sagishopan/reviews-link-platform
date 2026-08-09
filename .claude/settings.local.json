@@ -49,7 +49,9 @@
       "Bash(railway --version)",
       "Bash(railway link *)",
       "Bash(git commit *)",
-      "Bash(railway logs *)"
+      "Bash(railway logs *)",
+      "Bash(git rm *)",
+      "Bash(rm -rf client/dist)"
     ]
   }
 }
