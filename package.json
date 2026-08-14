@@ -9,11 +9,13 @@
   ],
   "scripts": {
     "seed": "npm run seed --workspace=server",
+    "seed:clean": "npm run seed --workspace=server -- --no-dummy",
     "dev:server": "npm run dev --workspace=server",
     "dev:client": "npm run dev --workspace=client",
     "build": "npm run build --workspace=client --if-present",
     "start": "npm run start --workspace=server",
-    "reset-password": "npm run reset-password --workspace=server"
+    "reset-password": "npm run reset-password --workspace=server",
+    "clear-responses": "npm run clear-responses --workspace=server"
   },
   "engines": {
     "node": ">=18"

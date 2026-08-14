@@ -189,12 +189,20 @@ function seedRestaurantAdmin(restaurant) {
 }
 
 function main() {
+  const skipDummy = process.argv.includes('--no-dummy');
+
   console.log('[seed] Starting database seed...');
   seedAdmin();
   const { restaurant, branches } = seedRestaurantAndBranches();
   seedRestaurantAdmin(restaurant);
   seedBranchManager(branches);
-  seedResponses(branches, 50);
+
+  if (!skipDummy) {
+    seedResponses(branches, 50);
+  } else {
+    console.log('[seed] Skipped dummy responses (--no-dummy flag).');
+  }
+
   console.log('[seed] Done.');
   console.log('');
   console.log('Login credentials:');
